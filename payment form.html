@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment form</title>
+    <link rel="stylesheet" href="paymentformstyle.css">
+</head>
+<body>
+    <div class="container">
+    <form action="">  <!--action used for the url of the server where we need to send the info-->
+        <h1>Payment form</h1>
+        <hr>
+        <p class="normal">required fields are followed by *</p>        <!--required atrribute is used in the input tag for compulsary details-->
+        <h3>Personal Information</h3>
+        <p>Name:*<input type="text" name="name" id="name" required placeholder="your name"></p>
+        <fieldset>                       <!--fielset is used to wrap elemnts with a box, legend for namin of group or box-->
+        <legend>Gender:*</legend>
+            <p>
+            Male<input type="radio" name="gender" id="gender" required>           <!--if we give same name to male and female web takes only one option othervise it will think both are from different category-->
+            female <input type="radio" name="gender" id="gender" required>
+        </p>
+        </fieldset>
+        <p>
+            Address: <textarea name="adress" id="adress" cols="100" rows="7" placeholder="your address"></textarea>    <!--for bigger texts-->
+        </p>
+        <p>
+            Email: <input type="email" name="email" required placeholder="your email">
+        </p>
+        <p>
+            Pincode: <input type="number" name="pin" id="pin" placeholder="your pincode">
+        </p>
+        <h3>Card Information</h3>
+        <p>
+            Card type:* <select name="card_type" id="card_type" required>         <!--select tag is used for selecting options, option tag is used in it-->
+
+               <option value="">--select the card--</option>               <!--value of first option is kept nothing because if user does not choose anything the value will be sent to server -->
+               <option value="mastercard">mastercard</option>
+               <option value="rupay">rupay</option>
+               <option value="bankcard">bankcard</option>
+            </select>
+            <p>Card number:* <input type="number" name="card_num" id="card_num" required></p>
+            <p>Expiration date:* <input type="date" name="date" id="date" required></p>
+            <p>CVV:* <input type="number" name="CVV" id="CVV" required></p>
+            <input type="submit" value="pay now">
+        </p>
+    </form>
+</div>
+</body>
+</html>
